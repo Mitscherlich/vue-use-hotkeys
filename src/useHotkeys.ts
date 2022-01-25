@@ -1,5 +1,5 @@
 import hotkeys, { HotkeysEvent, KeyHandler } from 'hotkeys-js';
-import { Ref, ref as useRef, watchEffect as useEffect } from 'vue';
+import { Ref, ref as useRef, effect as useEffect } from 'vue';
 
 type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT';
 
