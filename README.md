@@ -28,7 +28,7 @@ export default defineComponent(() => {
     count.value += 1;
   });
 
-  return (
+  return () => (
     <p>
       Pressed <kbd>ctrl + k</kbd> {count.value} times.
     </p>
@@ -36,6 +36,10 @@ export default defineComponent(() => {
 });
 ```
 
+# To-Do(s)
+
+- [ ] add support of `@vue/composition-api`;
+
 ## License
 
-Shared under [MIT](LICENSE) License.
+MIT &copy; [Mitscherlich](https://mitscherlich.me)
