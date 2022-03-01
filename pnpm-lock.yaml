@@ -10,7 +10,7 @@ specifiers:
   hotkeys-js: ^3.8.7
   jsdom: 19.0.0
   tsup: 5.11.13
-  typescript: 4.5.5
+  typescript: 4.6.2
   vite: 2.8.4
   vitest: 0.5.8
   vue: 3.2.31
@@ -26,8 +26,8 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 1.3.7
   '@vue/compiler-sfc': 3.2.31
   jsdom: 19.0.0
-  tsup: 5.11.13_typescript@4.5.5
-  typescript: 4.5.5
+  tsup: 5.11.13_typescript@4.6.2
+  typescript: 4.6.2
   vite: 2.8.4
   vitest: 0.5.8_jsdom@19.0.0
   vue: 3.2.31
@@ -1925,7 +1925,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.11.13_typescript@4.5.5:
+  /tsup/5.11.13_typescript@4.6.2:
     resolution: {integrity: sha512-NVMK01gVmojZn7+iZwxRK1CzW2BIabaVMyEjs7Nm9lm4DrSf7IAqs2F3fg0vT7rH72x1cIBsW9U/TlWrCvHVQQ==}
     hasBin: true
     peerDependencies:
@@ -1948,7 +1948,7 @@ packages:
       source-map: 0.7.3
       sucrase: 3.20.3
       tree-kill: 1.2.2
-      typescript: 4.5.5
+      typescript: 4.6.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -1966,8 +1966,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /typescript/4.5.5:
-    resolution: {integrity: sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==}
+  /typescript/4.6.2:
+    resolution: {integrity: sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
