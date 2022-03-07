@@ -9,7 +9,7 @@ specifiers:
   '@vue/compiler-sfc': 3.2.31
   hotkeys-js: ^3.8.7
   jsdom: 19.0.0
-  tsup: 5.11.13
+  tsup: 5.12.0
   typescript: 4.6.2
   vite: 2.8.6
   vitest: 0.5.9
@@ -26,7 +26,7 @@ devDependencies:
   '@vitejs/plugin-vue-jsx': 1.3.8
   '@vue/compiler-sfc': 3.2.31
   jsdom: 19.0.0
-  tsup: 5.11.13_typescript@4.6.2
+  tsup: 5.12.0_typescript@4.6.2
   typescript: 4.6.2
   vite: 2.8.6
   vitest: 0.5.9_jsdom@19.0.0
@@ -1925,8 +1925,8 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup/5.11.13_typescript@4.6.2:
-    resolution: {integrity: sha512-NVMK01gVmojZn7+iZwxRK1CzW2BIabaVMyEjs7Nm9lm4DrSf7IAqs2F3fg0vT7rH72x1cIBsW9U/TlWrCvHVQQ==}
+  /tsup/5.12.0_typescript@4.6.2:
+    resolution: {integrity: sha512-FGZZNikQYGlEPtKEnz04hEniEO9ctP0rfWOdDeJCpFY4sqQe+TE90YNsv/1g0FshXoGYAOTFDYAVHg6Ovh003Q==}
     hasBin: true
     peerDependencies:
       typescript: ^4.1.0
