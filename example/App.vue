@@ -11,7 +11,7 @@ useHotkeys(key, () => {
   count_1.value += 1;
 });
 
-const btnRef = useHotkeys(key, () => {
+const [btnRef] = useHotkeys(key, () => {
   count_2.value += 1;
 });
 </script>

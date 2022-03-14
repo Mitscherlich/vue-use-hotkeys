@@ -1,5 +1,5 @@
 import hotkeys, { HotkeysEvent, KeyHandler } from 'hotkeys-js';
-import { Ref, ref as useRef, effect as useEffect } from 'vue';
+import { Ref, ref as useRef, watchEffect } from 'vue';
 
 type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT';
 
@@ -89,7 +89,7 @@ export function useHotkeys<T extends Element>(
     return false;
   };
 
-  useEffect(() => {
+  const unbind = watchEffect((cleanup) => {
     if (!enabled) {
       hotkeys.unbind(keys, handleKeyboardEvent);
 
@@ -103,8 +103,8 @@ export function useHotkeys<T extends Element>(
 
     hotkeys(keys, (options as Options) || {}, handleKeyboardEvent);
 
-    return () => hotkeys.unbind(keys, handleKeyboardEvent);
+    cleanup(() => hotkeys.unbind(keys, handleKeyboardEvent));
   });
 
-  return ref;
+  return [ref, unbind];
 }
