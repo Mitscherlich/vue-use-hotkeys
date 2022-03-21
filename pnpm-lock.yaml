@@ -12,7 +12,7 @@ specifiers:
   tsup: 5.12.1
   typescript: 4.6.2
   vite: 2.8.6
-  vitest: 0.7.6
+  vitest: 0.7.7
   vue: 3.2.31
 
 dependencies:
@@ -29,7 +29,7 @@ devDependencies:
   tsup: 5.12.1_typescript@4.6.2
   typescript: 4.6.2
   vite: 2.8.6
-  vitest: 0.7.6_jsdom@19.0.0
+  vitest: 0.7.7_jsdom@19.0.0
   vue: 3.2.31
 
 packages:
@@ -2001,9 +2001,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.7.6_jsdom@19.0.0:
-    resolution: {integrity: sha512-fqk0cn0I2BUpzwLfeZ725JeXJ7WGwDtVcVBksQ6SdyjrBi6aex8t3w70TWgyLOXgylS7FJ8C9DRap4MMgpkqYw==}
-    engines: {node: '>=14.14.0'}
+  /vitest/0.7.7_jsdom@19.0.0:
+    resolution: {integrity: sha512-xU7BTB7T7GbcjFBdbZAAp/dIQUwn8bygI+cbw6Yq1oXj60oGRJ+nJ7AXvSOJyaHMTmglEoaqazyDGnCHJBXftw==}
+    engines: {node: '>=v14.19.1'}
     hasBin: true
     peerDependencies:
       '@vitest/ui': '*'
