@@ -38,7 +38,7 @@ export default defineComponent(() => {
 
 # To-Do(s)
 
-- [ ] add support of `@vue/composition-api`;
+- [x] add support of `@vue/composition-api`;
 
 ## License
 
