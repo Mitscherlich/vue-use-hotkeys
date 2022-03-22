@@ -11,7 +11,7 @@ const PropTypes = {
 };
 
 const HotKeysWithRef = defineComponent<{ onPress: KeyHandler }>(({ onPress }) => {
-  const [ref] = useHotkeys<HTMLElement>('a', onPress);
+  const ref = useHotkeys<HTMLElement>('a', onPress);
 
   return () => (
     <section ref={ref} tab-index={1} data-testid={'container'}>
