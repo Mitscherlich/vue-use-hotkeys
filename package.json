@@ -26,7 +26,8 @@
     "example:build": "vite build ./example -c vite.config.js"
   },
   "dependencies": {
-    "hotkeys-js": "^3.8.7"
+    "hotkeys-js": "^3.8.7",
+    "vue-demi": "^0.12.4"
   },
   "devDependencies": {
     "@testing-library/dom": "8.11.3",
@@ -43,7 +44,8 @@
     "vue": "3.2.31"
   },
   "peerDependencies": {
-    "vue": ">=2.7 || 3.x"
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {

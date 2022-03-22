@@ -14,9 +14,11 @@ specifiers:
   vite: 2.8.6
   vitest: 0.7.7
   vue: 3.2.31
+  vue-demi: ^0.12.4
 
 dependencies:
   hotkeys-js: 3.8.7
+  vue-demi: 0.12.4_vue@3.2.31
 
 devDependencies:
   '@testing-library/dom': 8.11.3
@@ -2033,6 +2035,21 @@ packages:
       - sass
       - stylus
     dev: true
+
+  /vue-demi/0.12.4_vue@3.2.31:
+    resolution: {integrity: sha512-ztPDkFt0TSUdoq1ZI6oD730vgztBkiByhUW7L1cOTebiSBqSYfSQgnhYakYigBkyAybqCTH7h44yZuDJf2xILQ==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.31
+    dev: false
 
   /vue/3.2.31:
     resolution: {integrity: sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw==}
