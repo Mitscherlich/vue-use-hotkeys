@@ -11,7 +11,7 @@ specifiers:
   jsdom: 19.0.0
   tsup: 5.12.5
   typescript: 4.6.3
-  vite: 2.9.2
+  vite: 2.9.4
   vitest: 0.8.4
   vue: 3.2.32
   vue-demi: ^0.12.4
@@ -24,13 +24,13 @@ devDependencies:
   '@testing-library/dom': 8.13.0
   '@testing-library/user-event': 13.5.0_@testing-library+dom@8.13.0
   '@testing-library/vue': 6.5.1_c8757308e959df4c23705f5a55108e1e
-  '@vitejs/plugin-vue': 2.3.1_vite@2.9.2+vue@3.2.32
+  '@vitejs/plugin-vue': 2.3.1_vite@2.9.4+vue@3.2.32
   '@vitejs/plugin-vue-jsx': 1.3.10
   '@vue/compiler-sfc': 3.2.32
   jsdom: 19.0.0
   tsup: 5.12.5_typescript@4.6.3
   typescript: 4.6.3
-  vite: 2.9.2
+  vite: 2.9.4
   vitest: 0.8.4_jsdom@19.0.0
   vue: 3.2.32
 
@@ -475,14 +475,14 @@ packages:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-vue/2.3.1_vite@2.9.2+vue@3.2.32:
+  /@vitejs/plugin-vue/2.3.1_vite@2.9.4+vue@3.2.32:
     resolution: {integrity: sha512-YNzBt8+jt6bSwpt7LP890U1UcTOIZZxfpE5WOJ638PNxSEKOqAi0+FSKS0nVeukfdZ0Ai/H7AFd6k3hayfGZqQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.2
+      vite: 2.9.4
       vue: 3.2.32
     dev: true
 
@@ -2007,8 +2007,8 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /vite/2.9.2:
-    resolution: {integrity: sha512-ScbfYsiG1N/xE2TnZWYWJ8aOFBQovEl4VLU+0dktxqXvqdAvcTOEUM5YqwaBkmNHSHUGHLPd92tuXFQ35wDkVw==}
+  /vite/2.9.4:
+    resolution: {integrity: sha512-7pO6ruZMsyTpaPB7kGtW+yj15Ze5g+E4w4Ramk1sAJLIuI4uPd5sauqubmZNpq0Yc1vLVxoXRf2Uj+qWxk5aXw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -2057,7 +2057,7 @@ packages:
       local-pkg: 0.4.1
       tinypool: 0.1.2
       tinyspy: 0.3.0
-      vite: 2.9.2
+      vite: 2.9.4
     transitivePeerDependencies:
       - less
       - sass
