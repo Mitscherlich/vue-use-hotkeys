@@ -1,5 +1,5 @@
-import vue from '@vitejs/plugin-vue';
-import jsx from '@vitejs/plugin-vue-jsx';
+import vue from '@vitejs/plugin-vue'
+import jsx from '@vitejs/plugin-vue-jsx'
 
 export default {
   plugins: [vue(), jsx()],
@@ -7,4 +7,4 @@ export default {
     globals: true,
     environment: 'jsdom',
   },
-};
+}

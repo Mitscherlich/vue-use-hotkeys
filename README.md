@@ -36,6 +36,10 @@ export default defineComponent(() => {
 });
 ```
 
+Preview demo:
+
+- [CodeSandbox Example](https://codesandbox.io/s/vue-use-hotkeys-demo-6kygbb)
+
 # To-Do(s)
 
 - [x] add support of `@vue/composition-api`;

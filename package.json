@@ -2,14 +2,21 @@
   "name": "vue-use-hotkeys",
   "description": "Vue composition for using keyboard shortcuts in components",
   "version": "0.2.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
-  },
   "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "source": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mitscherlich/vue-use-hotkeys.git"
@@ -18,12 +25,19 @@
   "bugs": "https://github.com/Mitscherlich/vue-use-hotkeys/issues",
   "author": "Mitscherlich <mitscherlich36@gmail.com>",
   "scripts": {
-    "build": "tsup",
+    "build": "tsup ./src/index.ts",
     "dev": "tsup --watch",
-    "test": "vitest",
-    "prepublishOnly": "pnpm run build",
-    "example:dev": "vite ./example -c vite.config.js",
-    "example:build": "vite build ./example -c vite.config.js"
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   },
   "dependencies": {
     "hotkeys-js": "^3.8.7",
@@ -41,36 +55,18 @@
     "jsdom": "19.0.0",
     "tsup": "5.12.5",
     "typescript": "4.6.3",
-    "vite": "2.9.5",
-    "vitest": "0.8.4",
-    "vue": "3.2.33"
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-rc.1",
-    "vue": "^2.0.0 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
-  },
-  "prettier": {
-    "printWidth": 100,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "vitest": "0.8.4"
   },
   "tsup": {
     "name": "vue-use-hotkeys",
-    "entry": [
-      "./src/index.ts"
-    ],
     "format": [
       "cjs",
       "esm"
     ],
-    "sourcemap": true,
-    "clean": true,
-    "dts": true
+    "dts": true,
+    "clean": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
