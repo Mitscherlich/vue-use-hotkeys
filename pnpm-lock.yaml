@@ -11,7 +11,7 @@ specifiers:
   eslint: ^8.13.0
   hotkeys-js: ^3.8.8
   jsdom: 19.0.0
-  tsup: 5.12.5
+  tsup: 5.12.6
   typescript: 4.6.3
   vitest: 0.8.4
   vue: ^3.2.33
@@ -31,7 +31,7 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.33
   eslint: 8.13.0
   jsdom: 19.0.0
-  tsup: 5.12.5_typescript@4.6.3
+  tsup: 5.12.6_typescript@4.6.3
   typescript: 4.6.3
   vitest: 0.8.4_jsdom@19.0.0
   vue: 3.2.33
@@ -1752,7 +1752,7 @@ packages:
       eslint-utils: 3.0.0_eslint@8.13.0
       ignore: 5.2.0
       is-core-module: 2.8.1
-      minimatch: 3.0.5
+      minimatch: 3.1.2
       resolve: 1.22.0
       semver: 6.3.0
     dev: true
@@ -2150,7 +2150,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.5
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
@@ -2730,12 +2730,6 @@ packages:
   /min-indent/1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
-    dev: true
-
-  /minimatch/3.0.5:
-    resolution: {integrity: sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw==}
-    dependencies:
-      brace-expansion: 1.1.11
     dev: true
 
   /minimatch/3.1.2:
@@ -3478,8 +3472,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.12.5_typescript@4.6.3:
-    resolution: {integrity: sha512-lKwzJsB49sDto51QjqOB4SdiBLKRvgTymEBuBCovcksdDwFEz3esrkbf3m497PXntUKVTzcgOfPdTgknMtvufw==}
+  /tsup/5.12.6_typescript@4.6.3:
+    resolution: {integrity: sha512-tpePOgdMRKRgazF+ujq9k1Fo44PUFUJJjRLtxq87pQrYW/Ub/fu1GpFGLzdUF9qjJ4FX1ykhf2d9mWCNy+jAtg==}
     hasBin: true
     peerDependencies:
       typescript: ^4.1.0
