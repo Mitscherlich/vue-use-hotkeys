@@ -1,3 +1,4 @@
+import type { MaybeRef } from '@m9ch/vhooks'
 import { useCallback, useEffect, useRef } from '@m9ch/vhooks'
 import type { HotkeysEvent, KeyHandler } from 'hotkeys-js'
 import hotkeys from 'hotkeys-js'
@@ -19,7 +20,7 @@ const isKeyboardEventTriggeredByInput = (ev: KeyboardEvent) => {
 }
 
 export interface Options {
-  enabled?: boolean // Main setting that determines if the hotkey is enabled or not. (Default: true)
+  enabled?: MaybeRef<boolean> // Main setting that determines if the hotkey is enabled or not. (Default: true)
   filter?: typeof hotkeys.filter // A filter function returning whether the callback should get triggered or not. (Default: undefined)
   filterPreventDefault?: boolean // Prevent default browser behavior if the filter function returns false. (Default: true)
   enableOnTags?: AvailableTags[] // Enable hotkeys on a list of tags. (Default: [])
@@ -30,10 +31,10 @@ export interface Options {
   keydown?: boolean // Trigger on keydown event? (Default: true)
 }
 
-export function useHotkeys<T extends Element>(keys: string, callback: KeyHandler, options?: Options): Ref<T | null>
-export function useHotkeys<T extends Element>(keys: string, callback: KeyHandler, deps?: any[]): Ref<T | null>
-export function useHotkeys<T extends Element>(keys: string, callback: KeyHandler, options?: Options, deps?: any[]): Ref<T | null>
-export function useHotkeys<T extends Element>(keys: string, callback: KeyHandler, options?: any[] | Options, deps?: any[]): Ref<T | null> {
+export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, options?: Options): Ref<T | null>
+export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, deps?: any[]): Ref<T | null>
+export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, options?: Options, deps?: any[]): Ref<T | null>
+export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, options?: any[] | Options, deps?: any[]): Ref<T | null> {
   if (options instanceof Array) {
     deps = options
     options = undefined
