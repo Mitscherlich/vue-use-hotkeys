@@ -1,7 +1,7 @@
 {
   "name": "vue-use-hotkeys",
   "description": "Vue composition for using keyboard shortcuts in components",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
