@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@m9ch/eslint-config-all': 0.2.0
-  '@m9ch/vhooks': ^0.1.0-alpha.5
+  '@m9ch/vhooks': ^0.1.0-alpha.8
   '@testing-library/dom': 8.13.0
   '@testing-library/user-event': 13.5.0
   '@testing-library/vue': 6.5.1
@@ -10,18 +10,18 @@ specifiers:
   '@vue/compiler-sfc': 3.2.33
   bumpp: ^7.1.1
   eslint: ^8.13.0
-  hotkeys-js: ^3.8.8
+  hotkeys-js: ^3.9.3
   jsdom: 19.0.0
   tsup: 5.12.7
   typescript: 4.6.4
   vitest: 0.10.5
   vue: ^3.2.33
-  vue-demi: ^0.12.4
+  vue-demi: ^0.12.5
 
 dependencies:
-  '@m9ch/vhooks': 0.1.0-alpha.5_vue@3.2.33
-  hotkeys-js: 3.8.9
-  vue-demi: 0.12.4_vue@3.2.33
+  '@m9ch/vhooks': 0.1.0-alpha.8_vue@3.2.33
+  hotkeys-js: 3.9.3
+  vue-demi: 0.12.5_vue@3.2.33
 
 devDependencies:
   '@m9ch/eslint-config-all': 0.2.0_gxlbpezod2brwls3orzn7r65tq
@@ -497,8 +497,8 @@ packages:
     resolution: {integrity: sha512-U4tTSE0hko7cxZNQxLSVbBFYy/XDJEuTCFZ862t8iQzGLDcypMUSK11oFoe7KX25+YihSvG9M5eR49KwOxGYBg==}
     dev: false
 
-  /@m9ch/vhooks/0.1.0-alpha.5_vue@3.2.33:
-    resolution: {integrity: sha512-/3+C2xF2/1UAFxl/VpCClf40Nyt1DfV/uvImYJVN8sz1DKkAQYtPNB9gJJfMGpNYV8cnPxJGfyFXeWArMac4Zg==}
+  /@m9ch/vhooks/0.1.0-alpha.8_vue@3.2.33:
+    resolution: {integrity: sha512-F/OyG0fHY7E4kcwOtFMMhNekZMcwNxbAL88K8vT4v55D+P8e11yWknkmfWTcVYgUrk+NMHqVneB51WmufnlVoA==}
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
       vue: ^2.0.0 || >=3.0.0
@@ -509,7 +509,7 @@ packages:
       '@m9ch/vhooks-types': 0.1.0-alpha.1
       '@m9ch/vhooks-utils': 0.1.0-alpha.0
       vue: 3.2.33
-      vue-demi: 0.12.4_vue@3.2.33
+      vue-demi: 0.12.5_vue@3.2.33
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2312,8 +2312,8 @@ packages:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
 
-  /hotkeys-js/3.8.9:
-    resolution: {integrity: sha512-R73wV21xjHq+sJcBhh+LJGvfZO5+p1vGFtEwCc6sCj5nnTyiZKBa1knge6LNBxHmlRe55PVBXNNM/4lJOIVAwQ==}
+  /hotkeys-js/3.9.3:
+    resolution: {integrity: sha512-s+f0xyvDmf6+DyrFQ2SY+eA7lbvMbjqkqi0I0SpMgnN5tZx7DeH8nsWhkJR4KEq3pxDPHJppDUhdt1rZFW5LeQ==}
     dev: false
 
   /html-encoding-sniffer/3.0.0:
@@ -3795,8 +3795,8 @@ packages:
       - stylus
     dev: true
 
-  /vue-demi/0.12.4_vue@3.2.33:
-    resolution: {integrity: sha512-ztPDkFt0TSUdoq1ZI6oD730vgztBkiByhUW7L1cOTebiSBqSYfSQgnhYakYigBkyAybqCTH7h44yZuDJf2xILQ==}
+  /vue-demi/0.12.5_vue@3.2.33:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
