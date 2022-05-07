@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef } from '@m9ch/vhooks'
 import type { HotkeysEvent, KeyHandler } from 'hotkeys-js'
 import hotkeys from 'hotkeys-js'
 import type { Ref } from 'vue-demi'
+import { unref } from 'vue-demi'
 
 type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT'
 
@@ -72,8 +73,8 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
   }, deps ? [ref, enableOnTags, filter, ...deps] : [ref, enableOnTags, filter])
 
   useEffect(() => {
-    if (!enabled) {
-      hotkeys.unbind(keys, memoisedCallback.value)
+    if (!unref(enabled)) {
+      hotkeys.unbind(unref(keys), memoisedCallback.value)
       return
     }
 
@@ -81,10 +82,10 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     if (keyup && keydown !== true)
       (options as Options).keydown = false
 
-    hotkeys(keys, (options as Options) || {}, memoisedCallback.value)
+    hotkeys(unref(keys), (options as Options) || {}, memoisedCallback.value)
 
-    return () => hotkeys.unbind(keys, memoisedCallback.value)
+    return () => hotkeys.unbind(unref(keys), memoisedCallback.value)
   }, [memoisedCallback, keys, enabled])
 
-  return ref
+  return ref as Ref<T | null>
 }
