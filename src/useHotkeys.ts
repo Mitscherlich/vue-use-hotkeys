@@ -22,9 +22,9 @@ const isKeyboardEventTriggeredByInput = (ev: KeyboardEvent) => {
 
 export interface Options {
   enabled?: MaybeRef<boolean> // Main setting that determines if the hotkey is enabled or not. (Default: true)
-  filter?: typeof hotkeys.filter // A filter function returning whether the callback should get triggered or not. (Default: undefined)
+  filter?: MaybeRef<typeof hotkeys.filter> // A filter function returning whether the callback should get triggered or not. (Default: undefined)
   filterPreventDefault?: boolean // Prevent default browser behavior if the filter function returns false. (Default: true)
-  enableOnTags?: AvailableTags[] // Enable hotkeys on a list of tags. (Default: [])
+  enableOnTags?: MaybeRef<AvailableTags[]> // Enable hotkeys on a list of tags. (Default: [])
   enableOnContentEditable?: boolean // Enable hotkeys on tags with contentEditable props. (Default: false)
   splitKey?: string // Character to split keys in hotkeys combinations. (Default +)
   scope?: string // Scope. Currently not doing anything.
@@ -54,12 +54,13 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
 
   // The return value of this callback determines if the browsers default behavior is prevented.
   const memoisedCallback = useCallback((keyboardEvent: KeyboardEvent, hotkeysEvent: HotkeysEvent) => {
-    if (filter && !filter(keyboardEvent))
+    const currentFilter = unref(filter)
+    if (currentFilter && !currentFilter(keyboardEvent))
       return !filterPreventDefault
 
     // Check whether the hotkeys was triggered inside an input and that input is enabled or if it was triggered by a content editable tag and it is enabled.
     if (
-      (isKeyboardEventTriggeredByInput(keyboardEvent) && !tagFilter(keyboardEvent, enableOnTags))
+      (isKeyboardEventTriggeredByInput(keyboardEvent) && !tagFilter(keyboardEvent, unref(enableOnTags)))
       || ((keyboardEvent.target as HTMLElement)?.isContentEditable && !enableOnContentEditable)
     )
       return true

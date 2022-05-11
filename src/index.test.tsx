@@ -69,7 +69,7 @@ test('useHotkeys should only fire when element is focused if a ref is set.', () 
   expect(onPress).toBeCalled()
 })
 
-test('useHotkeys correctly assign deps when used as third argument and options being omitted', async() => {
+test('useHotkeys correctly assign deps when used as third argument and options being omitted', async () => {
   let count = 0
   const callback = vitest.fn()
   renderHook(() => useHotkeys('a', () => callback(++count), [count]))
@@ -128,7 +128,7 @@ test('useHotkeys should trigger twice if keyup and keydown is set to true', () =
   expect(called).toBe(true)
 })
 
-test('useHotkeys should be enabled on given form tags', async() => {
+test('useHotkeys should be enabled on given form tags', async () => {
   const onPress = vitest.fn()
   render(<HotkeysOnInput onPress={onPress} useTags={true} />)
   const input = document.querySelector('input')
@@ -137,14 +137,14 @@ test('useHotkeys should be enabled on given form tags', async() => {
   expect(onPress).toHaveBeenCalled()
 })
 
-test('useHotkeys should not be enabled on given form tags when filter specifies different input field', async() => {
+test('useHotkeys should not be enabled on given form tags when filter specifies different input field', async () => {
   const onPress = vitest.fn()
   render(<HotkeysFilteredOnInput onPress={onPress} useTags={true} />)
   userEvent.type(screen.getByRole('textbox'), 'A')
   expect(onPress).toHaveBeenCalledTimes(0)
 })
 
-test('useHotkeys should not be enabled on given form tags when tags is not set', async() => {
+test('useHotkeys should not be enabled on given form tags when tags is not set', async () => {
   const onPress = vitest.fn()
   render(<HotkeysFilteredOnInput onPress={onPress} useTags={false} />)
   userEvent.type(screen.getByRole('textbox'), 'A')
