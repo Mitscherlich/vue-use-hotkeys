@@ -14,7 +14,7 @@ specifiers:
   jsdom: 19.0.0
   tsup: 5.12.7
   typescript: 4.6.4
-  vitest: 0.10.5
+  vitest: 0.12.4
   vue: ^3.2.33
   vue-demi: ^0.12.5
 
@@ -35,7 +35,7 @@ devDependencies:
   jsdom: 19.0.0
   tsup: 5.12.7_typescript@4.6.4
   typescript: 4.6.4
-  vitest: 0.10.5_jsdom@19.0.0
+  vitest: 0.12.4_jsdom@19.0.0
   vue: 3.2.33
 
 packages:
@@ -254,6 +254,8 @@ packages:
     resolution: {integrity: sha512-vqUSBLP8dQHFPdPi9bc5GK9vRkYHJ49fsZdtoJ8EQ8ibpwk5rPKfvNIwChB0KVXcIjcepEBBd2VHC5r9Gy8ueg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: true
 
   /@babel/plugin-syntax-import-meta/7.10.4_@babel+core@7.17.9:
@@ -411,7 +413,7 @@ packages:
       eslint: 8.13.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.13.0
       eslint-plugin-html: 6.2.0
-      eslint-plugin-import: 2.26.0_eslint@8.13.0
+      eslint-plugin-import: 2.26.0_659090a1a2f507e2e971a348ed10736d
       eslint-plugin-jsonc: 2.2.1_eslint@8.13.0
       eslint-plugin-n: 15.2.0_eslint@8.13.0
       eslint-plugin-promise: 6.0.0_eslint@8.13.0
@@ -421,11 +423,13 @@ packages:
       jsonc-eslint-parser: 2.1.0
       yaml-eslint-parser: 0.5.0
     transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
       - typescript
     dev: true
 
-  /@m9ch/eslint-config-base/0.2.1_eslint@8.13.0+typescript@4.6.4:
+  /@m9ch/eslint-config-base/0.2.1_bd994e352ae473ad3e507fadfa78fd8c:
     resolution: {integrity: sha512-ZwcVhDd8Tfl3nnWNV1JFxUtZrey+8WoS2gkOu8FFf5snvRkbAg63nNcwYNiwfXFnrLDmyZJCKINT85k+vBUhmw==}
     peerDependencies:
       eslint: '>=7.4.0'
@@ -433,7 +437,7 @@ packages:
       eslint: 8.13.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.13.0
       eslint-plugin-html: 6.2.0
-      eslint-plugin-import: 2.26.0_eslint@8.13.0
+      eslint-plugin-import: 2.26.0_659090a1a2f507e2e971a348ed10736d
       eslint-plugin-jsonc: 2.2.1_eslint@8.13.0
       eslint-plugin-m9ch: 0.2.1_eslint@8.13.0+typescript@4.6.4
       eslint-plugin-markdown: 2.2.1_eslint@8.13.0
@@ -444,6 +448,9 @@ packages:
       jsonc-eslint-parser: 2.1.0
       yaml-eslint-parser: 0.5.0
     transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
       - typescript
     dev: true
@@ -457,6 +464,8 @@ packages:
       eslint: 8.13.0
       eslint-plugin-react: 7.29.4_eslint@8.13.0
     transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
       - typescript
     dev: true
@@ -467,12 +476,14 @@ packages:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@m9ch/eslint-config-base': 0.2.1_eslint@8.13.0+typescript@4.6.4
+      '@m9ch/eslint-config-base': 0.2.1_bd994e352ae473ad3e507fadfa78fd8c
       '@typescript-eslint/eslint-plugin': 5.20.0_bd994e352ae473ad3e507fadfa78fd8c
       '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.4
       eslint: 8.13.0
       typescript: 4.6.4
     transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
     dev: true
 
@@ -485,6 +496,8 @@ packages:
       eslint: 8.13.0
       eslint-plugin-vue: 8.7.1_eslint@8.13.0
     transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
       - typescript
     dev: true
@@ -1297,12 +1310,22 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.1.2
     dev: true
@@ -1707,14 +1730,34 @@ packages:
     dependencies:
       debug: 3.2.7
       resolve: 1.22.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
-  /eslint-module-utils/2.7.3:
+  /eslint-module-utils/2.7.3_79d2f00ecbd106bd78ba8012bfc919b2:
     resolution: {integrity: sha512-088JEC7O3lDZM9xGe0RerkOMd0EjFl+Yvd1jPWIkMT5u3H9+HC34mWWPnqPrN13gieT9pBOO+Qt07Nb/6TresQ==}
     engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
     dependencies:
+      '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.4
       debug: 3.2.7
+      eslint-import-resolver-node: 0.3.6
       find-up: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-plugin-es/4.1.0_eslint@8.13.0:
@@ -1745,19 +1788,24 @@ packages:
       htmlparser2: 7.2.0
     dev: true
 
-  /eslint-plugin-import/2.26.0_eslint@8.13.0:
+  /eslint-plugin-import/2.26.0_659090a1a2f507e2e971a348ed10736d:
     resolution: {integrity: sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==}
     engines: {node: '>=4'}
     peerDependencies:
+      '@typescript-eslint/parser': '*'
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
     dependencies:
+      '@typescript-eslint/parser': 5.20.0_eslint@8.13.0+typescript@4.6.4
       array-includes: 3.1.4
       array.prototype.flat: 1.3.0
       debug: 2.6.9
       doctrine: 2.1.0
       eslint: 8.13.0
       eslint-import-resolver-node: 0.3.6
-      eslint-module-utils: 2.7.3
+      eslint-module-utils: 2.7.3_79d2f00ecbd106bd78ba8012bfc919b2
       has: 1.0.3
       is-core-module: 2.8.1
       is-glob: 4.0.3
@@ -1765,6 +1813,10 @@ packages:
       object.values: 1.1.5
       resolve: 1.22.0
       tsconfig-paths: 3.14.1
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
     dev: true
 
   /eslint-plugin-jsonc/2.2.1_eslint@8.13.0:
@@ -3762,8 +3814,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.10.5_jsdom@19.0.0:
-    resolution: {integrity: sha512-4qXdNbHwAd9YcsztJoVMWUQGcMATVlY9Xd95I3KQ2JJwDLTL97f/jgfGRotqptvNxdlmme5TBY0Gv+l6+JSYvA==}
+  /vitest/0.12.4_jsdom@19.0.0:
+    resolution: {integrity: sha512-EDxdhlAt6vcu6y4VouAI60z78iCAVFnfBL4VlSQVQnGmOk5altOtIKvp3xfZ+cfo4iVHgqq1QNyf5qOFiL4leg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
