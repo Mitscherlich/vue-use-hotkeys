@@ -41,8 +41,8 @@
     }
   },
   "dependencies": {
-    "@m9ch/vhooks": "^0.1.0-alpha.10",
-    "hotkeys-js": "^3.9.3",
+    "@m9ch/vhooks": "^0.1.0-alpha.11",
+    "hotkeys-js": "^3.9.4",
     "vue-demi": "^0.12.5"
   },
   "devDependencies": {
@@ -58,7 +58,7 @@
     "tsup": "5.12.8",
     "typescript": "4.6.4",
     "vitest": "0.12.9",
-    "vue": "^3.2.33"
+    "vue": "^3.2.36"
   },
   "tsup": {
     "name": "vue-use-hotkeys",
