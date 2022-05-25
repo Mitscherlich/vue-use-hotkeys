@@ -12,7 +12,7 @@ specifiers:
   eslint: ^8.13.0
   hotkeys-js: ^3.9.4
   jsdom: 19.0.0
-  tsup: 5.12.8
+  tsup: 6.0.1
   typescript: 4.7.2
   vitest: 0.12.9
   vue: ^3.2.36
@@ -33,7 +33,7 @@ devDependencies:
   bumpp: 7.1.1
   eslint: 8.13.0
   jsdom: 19.0.0
-  tsup: 5.12.8_typescript@4.7.2
+  tsup: 6.0.1_typescript@4.7.2
   typescript: 4.7.2
   vitest: 0.12.9_jsdom@19.0.0
   vue: 3.2.36
@@ -3337,8 +3337,8 @@ packages:
       glob: 7.1.6
     dev: true
 
-  /rollup/2.67.1:
-    resolution: {integrity: sha512-1Sbcs4OuW+aD+hhqpIRl+RqooIpF6uQcfzU/QSI7vGkwADY6cM4iLsBGRM2CGLXDTDN5y/yShohFmnKegSPWzg==}
+  /rollup/2.74.1:
+    resolution: {integrity: sha512-K2zW7kV8Voua5eGkbnBtWYfMIhYhT9Pel2uhBk2WO5eMee161nPze/XRfvEQPFYz7KgrCCnmh2Wy0AMFLGGmMA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3651,26 +3651,33 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/5.12.8_typescript@4.7.2:
-    resolution: {integrity: sha512-fSBzUBtrnAQ+XKPfj1KcZ2Pl0EUlKBqpbTmRAs+2mL34fQlowrm6ccQgOYyMe9MMAcejMP6/7Rw3qKjx1lreZA==}
+  /tsup/6.0.1_typescript@4.7.2:
+    resolution: {integrity: sha512-2Pl1YkEEvzfg4aYgwUILaHV0wwZQKO7mNHMQChyzdCNlQqf11eug7gWk86XCb3CvRofCXBX87x73BTGjyS3cOQ==}
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
       typescript: ^4.1.0
     peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
       typescript:
         optional: true
     dependencies:
       bundle-require: 3.0.4_esbuild@0.14.29
       cac: 6.7.12
       chokidar: 3.5.3
-      debug: 4.3.3
+      debug: 4.3.4
       esbuild: 0.14.29
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
       postcss-load-config: 3.1.1
       resolve-from: 5.0.0
-      rollup: 2.67.1
+      rollup: 2.74.1
       source-map: 0.8.0-beta.0
       sucrase: 3.20.3
       tree-kill: 1.2.2
@@ -3795,7 +3802,7 @@ packages:
       esbuild: 0.14.29
       postcss: 8.4.13
       resolve: 1.22.0
-      rollup: 2.67.1
+      rollup: 2.74.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
