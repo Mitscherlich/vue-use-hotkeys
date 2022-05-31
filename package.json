@@ -43,7 +43,7 @@
   "dependencies": {
     "@m9ch/vhooks": "^0.1.0-alpha.11",
     "hotkeys-js": "^3.9.4",
-    "vue-demi": "^0.12.5"
+    "vue-demi": "^0.13.0"
   },
   "devDependencies": {
     "@m9ch/eslint-config-all": "0.2.2",
