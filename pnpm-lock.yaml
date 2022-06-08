@@ -5,7 +5,7 @@ specifiers:
   '@m9ch/vhooks': ^0.1.0-alpha.11
   '@testing-library/dom': 8.13.0
   '@testing-library/user-event': 13.5.0
-  '@testing-library/vue': 6.5.1
+  '@testing-library/vue': 6.6.0
   '@vitejs/plugin-vue-jsx': ^1.3.10
   '@vue/compiler-sfc': 3.2.37
   bumpp: ^7.1.1
@@ -27,7 +27,7 @@ devDependencies:
   '@m9ch/eslint-config-all': 0.2.3_krajcyuadn3klaatluyjkjweeq
   '@testing-library/dom': 8.13.0
   '@testing-library/user-event': 13.5.0_tlwynutqiyp5mns3woioasuxnq
-  '@testing-library/vue': 6.5.1_vlzncnmgycebjpzordvz2rbunm
+  '@testing-library/vue': 6.6.0_vlzncnmgycebjpzordvz2rbunm
   '@vitejs/plugin-vue-jsx': 1.3.10
   '@vue/compiler-sfc': 3.2.37
   bumpp: 7.1.1
@@ -575,8 +575,8 @@ packages:
       '@testing-library/dom': 8.13.0
     dev: true
 
-  /@testing-library/vue/6.5.1_vlzncnmgycebjpzordvz2rbunm:
-    resolution: {integrity: sha512-zbh2cAJrFbNN9i30Ly6rhbxq7y1aD1Au8v4QjukOLWWHJj7WH6q051eBcHTxPFjKCU4sCH6w6Xn5Qj7B35vc0w==}
+  /@testing-library/vue/6.6.0_vlzncnmgycebjpzordvz2rbunm:
+    resolution: {integrity: sha512-pVCYlXSc19TDe8h9KgZGRY9CrdrsN2wLOegWbyI53FDUEJOuk/3w/BeXPLTQPMYxIv4N3/ZKK2ZJcBsNCouajA==}
     engines: {node: '>=12'}
     peerDependencies:
       '@vue/compiler-sfc': '>= 3'
