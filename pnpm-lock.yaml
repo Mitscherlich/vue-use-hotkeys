@@ -12,7 +12,7 @@ specifiers:
   eslint: ^8.13.0
   hotkeys-js: ^3.9.4
   jsdom: 20.0.0
-  tsup: 6.2.0
+  tsup: 6.2.1
   typescript: 4.7.4
   vitest: 0.19.1
   vue: ^3.2.36
@@ -33,7 +33,7 @@ devDependencies:
   bumpp: 8.2.1
   eslint: 8.13.0
   jsdom: 20.0.0
-  tsup: 6.2.0_typescript@4.7.4
+  tsup: 6.2.1_typescript@4.7.4
   typescript: 4.7.4
   vitest: 0.19.1_jsdom@20.0.0
   vue: 3.2.36
@@ -2568,7 +2568,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -3694,8 +3694,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/6.2.0_typescript@4.7.4:
-    resolution: {integrity: sha512-PNRQY/eUrtQgPHITOa9qU1Qss2AKHZl9OJFMsQGF+rpcQBMIYh5i0BUh5Gam8C8J0OuNQOGazqBEQHWMFLJKlQ==}
+  /tsup/6.2.1_typescript@4.7.4:
+    resolution: {integrity: sha512-KhBhCqVA3bHrIWhkcqTUA7R69H05IcBlHEtCVLEu42XDGUzz+bDqCcfu5PwpkKJ8DqK5tpdgM/qmyk4DdUbkZw==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
