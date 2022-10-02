@@ -54,7 +54,7 @@
     "@vue/compiler-sfc": "3.2.40",
     "bumpp": "8.2.1",
     "eslint": "8.24.0",
-    "jsdom": "20.0.0",
+    "jsdom": "20.0.1",
     "tsup": "6.2.3",
     "typescript": "4.8.4",
     "vitest": "0.23.4",
