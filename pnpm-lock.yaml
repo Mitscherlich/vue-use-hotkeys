@@ -11,7 +11,7 @@ specifiers:
   bumpp: 8.2.1
   eslint: 8.25.0
   hotkeys-js: ^3.9.4
-  jsdom: 20.0.1
+  jsdom: 20.0.2
   tsup: 6.3.0
   typescript: 4.8.4
   vitest: 0.24.4
@@ -32,10 +32,10 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.41
   bumpp: 8.2.1
   eslint: 8.25.0
-  jsdom: 20.0.1
+  jsdom: 20.0.2
   tsup: 6.3.0_typescript@4.8.4
   typescript: 4.8.4
-  vitest: 0.24.4_jsdom@20.0.1
+  vitest: 0.24.4_jsdom@20.0.2
   vue: 3.2.41
 
 packages:
@@ -2648,8 +2648,8 @@ packages:
       argparse: 2.0.1
     dev: true
 
-  /jsdom/20.0.1:
-    resolution: {integrity: sha512-pksjj7Rqoa+wdpkKcLzQRHhJCEE42qQhl/xLMUKHgoSejaKOdaXEAnqs6uDNwMl/fciHTzKeR8Wm8cw7N+g98A==}
+  /jsdom/20.0.2:
+    resolution: {integrity: sha512-AHWa+QO/cgRg4N+DsmHg1Y7xnz+8KU3EflM0LVDTdmrYOc1WWTSkOjtpUveQH+1Bqd5rtcVnb/DuxV/UjDO4rA==}
     engines: {node: '>=14'}
     peerDependencies:
       canvas: ^2.5.0
@@ -3884,7 +3884,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.24.4_jsdom@20.0.1:
+  /vitest/0.24.4_jsdom@20.0.2:
     resolution: {integrity: sha512-4ratHSyVEJPtBLV00uhL4Wj3Pmandc9rsxUkE0q9peNOfaOgGF4lEepdkaXGRi9AGFKr1GRVtjGOJ6Fp2lCpEg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -3911,7 +3911,7 @@ packages:
       '@types/node': 17.0.42
       chai: 4.3.6
       debug: 4.3.4
-      jsdom: 20.0.1
+      jsdom: 20.0.2
       local-pkg: 0.4.2
       strip-literal: 0.4.2
       tinybench: 2.3.1
