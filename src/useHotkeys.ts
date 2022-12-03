@@ -22,7 +22,7 @@ const isKeyboardEventTriggeredByInput = (ev: KeyboardEvent) => {
 
 export interface Options {
   enabled?: MaybeRef<boolean> // Main setting that determines if the hotkey is enabled or not. (Default: true)
-  filter?: MaybeRef<typeof hotkeys.filter> // A filter function returning whether the callback should get triggered or not. (Default: undefined)
+  filter?: typeof hotkeys.filter // A filter function returning whether the callback should get triggered or not. (Default: undefined)
   filterPreventDefault?: boolean // Prevent default browser behavior if the filter function returns false. (Default: true)
   enableOnTags?: MaybeRef<AvailableTags[]> // Enable hotkeys on a list of tags. (Default: [])
   enableOnContentEditable?: boolean // Enable hotkeys on tags with contentEditable props. (Default: false)
@@ -36,7 +36,7 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
 export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, deps?: any[]): Ref<T | null>
 export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, options?: Options, deps?: any[]): Ref<T | null>
 export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: KeyHandler, options?: any[] | Options, deps?: any[]): Ref<T | null> {
-  if (options instanceof Array) {
+  if (Array.isArray(options)) {
     deps = options
     options = undefined
   }
@@ -54,8 +54,7 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
 
   // The return value of this callback determines if the browsers default behavior is prevented.
   const memoisedCallback = useCallback((keyboardEvent: KeyboardEvent, hotkeysEvent: HotkeysEvent) => {
-    const currentFilter = unref(filter)
-    if (currentFilter && !currentFilter(keyboardEvent))
+    if (filter && !filter(keyboardEvent))
       return !filterPreventDefault
 
     // Check whether the hotkeys was triggered inside an input and that input is enabled or if it was triggered by a content editable tag and it is enabled.
@@ -65,7 +64,7 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     )
       return true
 
-    if (ref.value === null || document.activeElement === ref.value) {
+    if (ref.value === null || document.activeElement === ref.value || ref.value?.contains(document.activeElement)) {
       callback(keyboardEvent, hotkeysEvent)
       return true
     }
@@ -75,7 +74,7 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
 
   useEffect(() => {
     if (!unref(enabled)) {
-      hotkeys.unbind(unref(keys), memoisedCallback.value)
+      hotkeys.unbind(unref(keys), memoisedCallback)
       return
     }
 
@@ -83,9 +82,9 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     if (keyup && keydown !== true)
       (options as Options).keydown = false
 
-    hotkeys(unref(keys), (options as Options) || {}, memoisedCallback.value)
+    hotkeys(unref(keys), (options as Options) || {}, memoisedCallback)
 
-    return () => hotkeys.unbind(unref(keys), memoisedCallback.value)
+    return () => hotkeys.unbind(unref(keys), memoisedCallback)
   }, [memoisedCallback, keys, enabled])
 
   return ref as Ref<T | null>
