@@ -41,8 +41,8 @@
     }
   },
   "dependencies": {
-    "@m9ch/vhooks": "^0.1.0-alpha.11",
-    "hotkeys-js": "^3.9.4",
+    "@m9ch/vhooks": "~0.1.0-beta.8",
+    "hotkeys-js": "^3.10.1",
     "vue-demi": "^0.13.0"
   },
   "devDependencies": {
