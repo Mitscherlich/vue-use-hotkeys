@@ -1,6 +1,6 @@
 # vue-use-hotkeys
 
-Vue composition for using keyboard shortcuts in components. Inspired by [react-hotkeys-hook](https://github.com/JohannesKlauss/react-hotkeys-hook).
+Vue composition for using keyboard shortcuts in components.
 This is a hook version for [hotkeys](https://github.com/jaywcjlove/hotkeys) package.
 
 ## Install
