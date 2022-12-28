@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@m9ch/eslint-config-all': 0.3.0
-  '@m9ch/vhooks': ~0.1.0-beta.8
+  '@m9ch/vhooks': ~0.1.0-beta.10
   '@testing-library/dom': 8.19.0
   '@testing-library/user-event': 13.5.0
   '@testing-library/vue': 6.6.1
@@ -19,7 +19,7 @@ specifiers:
   vue-demi: ^0.13.0
 
 dependencies:
-  '@m9ch/vhooks': 0.1.0-beta.8_vue@3.2.45
+  '@m9ch/vhooks': 0.1.0-beta.10_vue@3.2.45
   hotkeys-js: 3.10.1
   vue-demi: 0.13.0_vue@3.2.45
 
@@ -547,18 +547,18 @@ packages:
       throttle-debounce: 3.0.1
     dev: false
 
-  /@m9ch/vhooks-types/0.1.0-beta.8:
-    resolution: {integrity: sha512-YdsxBOyAbu4GA6DZJDqgR74v4wU05RETkbvTrODFdbvszKxDhV0b/r3O7G2dHHZxtfgHXlNW0w6plNFMNP+6CQ==}
+  /@m9ch/vhooks-types/0.1.0-beta.10:
+    resolution: {integrity: sha512-5iBknvDWyJw9zSsnA8SzWX2c1s5FGjbWRsNCE1k11hV4khzCfAyzvskgAd7d0MXIvNUyhMsoLvjtsghg+rbfXg==}
     dev: false
 
-  /@m9ch/vhooks-utils/0.1.0-beta.8:
-    resolution: {integrity: sha512-+khGDVA6E478VTQtx8JflEdDdNRcZp9MRacvvrKtvn0ElQKL7o1xdJXZpgB161K2mxm2hmIZbgUqwGalTCC0bw==}
+  /@m9ch/vhooks-utils/0.1.0-beta.10:
+    resolution: {integrity: sha512-Lh5nSrNYZr5MFSonhjUIgdDBaSGVstcDsLa20ZpMBQRMSt7MXaB/ygmZT8M8E0a7pSbhILfX/a6AIpEMcVS3uw==}
     dependencies:
       '@m9ch/utils': 0.2.0
     dev: false
 
-  /@m9ch/vhooks/0.1.0-beta.8_vue@3.2.45:
-    resolution: {integrity: sha512-F8BJW1QfZRVl/UjUGij4Vphs7XFHeUbty4fSynbNeiSlj5bU288ln9L1JPHMe1ZJOvksM7KvzhUk349gFek3zA==}
+  /@m9ch/vhooks/0.1.0-beta.10_vue@3.2.45:
+    resolution: {integrity: sha512-gf73Ovs+VGRUBfUF594fPMMjCgFs3CnrLxkdFz0yrL4z8SY7DlBaXMSREMpQEr+W5AcmDOJerMsw5tpqurgn8w==}
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
       vue: ^2.0.0 || >=3.0.0
@@ -567,10 +567,11 @@ packages:
         optional: true
     dependencies:
       '@m9ch/utils': 0.3.1
-      '@m9ch/vhooks-types': 0.1.0-beta.8
-      '@m9ch/vhooks-utils': 0.1.0-beta.8
+      '@m9ch/vhooks-types': 0.1.0-beta.10
+      '@m9ch/vhooks-utils': 0.1.0-beta.10
       ajv: 8.11.2
       ajv-errors: 3.0.0_ajv@8.11.2
+      ajv-formats: 2.1.1
       dayjs: 1.11.5
       lodash: 4.17.21
       vue: 3.2.45
@@ -987,6 +988,15 @@ packages:
     resolution: {integrity: sha512-V3wD15YHfHz6y0KdhYFjyy9vWtEVALT9UrxfN3zqlI6dMioHnJrqOYfyPKol3oqrnCM9uwkcdCwkJ0WUcbLMTQ==}
     peerDependencies:
       ajv: ^8.0.1
+    dependencies:
+      ajv: 8.11.2
+    dev: false
+
+  /ajv-formats/2.1.1:
+    resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
+    peerDependenciesMeta:
+      ajv:
+        optional: true
     dependencies:
       ajv: 8.11.2
     dev: false
