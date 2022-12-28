@@ -41,7 +41,7 @@
     }
   },
   "dependencies": {
-    "@m9ch/vhooks": "~0.1.0-beta.8",
+    "@m9ch/vhooks": "~0.1.0-beta.10",
     "hotkeys-js": "^3.10.1",
     "vue-demi": "^0.13.0"
   },
@@ -68,8 +68,5 @@
     ],
     "dts": true,
     "clean": true
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
