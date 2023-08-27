@@ -10,13 +10,13 @@ type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT'
 // We implement our own custom filter system.
 hotkeys.filter = () => true
 
-const tagFilter = ({ target }: KeyboardEvent, enableOnTags?: AvailableTags[]) => {
+function tagFilter({ target }: KeyboardEvent, enableOnTags?: AvailableTags[]) {
   const targetTagName = target && (target as HTMLElement).tagName
 
   return Boolean((targetTagName && enableOnTags && enableOnTags.includes(targetTagName as AvailableTags)))
 }
 
-const isKeyboardEventTriggeredByInput = (ev: KeyboardEvent) => {
+function isKeyboardEventTriggeredByInput(ev: KeyboardEvent) {
   return tagFilter(ev, ['INPUT', 'TEXTAREA', 'SELECT'])
 }
 
