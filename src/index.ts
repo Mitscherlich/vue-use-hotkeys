@@ -1,6 +1,7 @@
 import hotkeys from 'hotkeys-js'
 import { useIsHotkeyPressed } from './useIsHotkeyPressed'
-import { Options, useHotkeys } from './useHotkeys'
+import { useHotkeys } from './useHotkeys'
+import type { Options } from './useHotkeys'
 
 const isHotkeyPressed = hotkeys.isPressed
 
