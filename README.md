@@ -18,22 +18,22 @@ $ npm i -S vue-use-hotkeys
 ## Usage
 
 ```jsx
-import { defineComponent, ref } from 'vue';
-import { useHotkeys } from 'vue-use-hotkeys';
+import { defineComponent, ref } from 'vue'
+import { useHotkeys } from 'vue-use-hotkeys'
 
 export default defineComponent(() => {
-  const count = ref(0);
+  const count = ref(0)
 
   useHotKeys('ctrl + k', () => {
-    count.value += 1;
-  });
+    count.value += 1
+  })
 
   return () => (
     <p>
       Pressed <kbd>ctrl + k</kbd> {count.value} times.
     </p>
-  );
-});
+  )
+})
 ```
 
 Preview demo:
