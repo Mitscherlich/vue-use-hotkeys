@@ -1,0 +1,24 @@
+diff --git a/dist/hotkeys.common.js b/dist/hotkeys.common.js
+index 51415021e9e9d149b05dd8e4fcc3a07f73c6cbd4..6a9e93b4b1634b5c1ee0a93662a3ae57c1d02159 100644
+--- a/dist/hotkeys.common.js
++++ b/dist/hotkeys.common.js
+@@ -255,6 +255,9 @@ function deleteScope(scope, newScope) {
+ // 清除修饰键
+ function clearModifier(event) {
+   var key = event.keyCode || event.which || event.charCode;
++  if (!key && event.key) {
++    key = code(event.key);
++  }
+   var i = _downKeys.indexOf(key);
+ 
+   // 从列表中清除按压过的键
+@@ -371,6 +374,9 @@ function eventHandler(event, handler, scope, element) {
+ function dispatch(event, element) {
+   var asterisk = _handlers['*'];
+   var key = event.keyCode || event.which || event.charCode;
++  if (!key && event.key) {
++    key = code(event.key);
++  }
+ 
+   // 表单控件过滤 默认表单控件不触发快捷键
+   if (!hotkeys.filter.call(this, event)) return;

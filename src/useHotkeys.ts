@@ -1,9 +1,8 @@
-import type { MaybeRef } from '@m9ch/vhooks'
-import { useCallback, useEffect, useRef } from '@m9ch/vhooks'
 import type { HotkeysEvent, KeyHandler } from 'hotkeys-js'
 import hotkeys from 'hotkeys-js'
-import type { Ref } from 'vue-demi'
-import { unref } from 'vue-demi'
+import type { MaybeRef, Ref } from 'vue-demi'
+import { ref, unref, watchPostEffect } from 'vue-demi'
+import useMounted from './useMounted'
 
 type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT'
 
@@ -12,7 +11,6 @@ hotkeys.filter = () => true
 
 function tagFilter({ target }: KeyboardEvent, enableOnTags?: AvailableTags[]) {
   const targetTagName = target && (target as HTMLElement).tagName
-
   return Boolean((targetTagName && enableOnTags && enableOnTags.includes(targetTagName as AvailableTags)))
 }
 
@@ -50,10 +48,9 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     enabled = true,
     enableOnContentEditable = false,
   } = options as Options || {}
-  const ref = useRef<T | null>(null)
+  const _ref = ref<T | null>(null)
 
-  // The return value of this callback determines if the browsers default behavior is prevented.
-  const memoisedCallback = useCallback((keyboardEvent: KeyboardEvent, hotkeysEvent: HotkeysEvent) => {
+  const onKeyboard = (keyboardEvent: KeyboardEvent, hotkeysEvent: HotkeysEvent) => {
     if (filter && !filter(keyboardEvent))
       return !filterPreventDefault
 
@@ -64,17 +61,22 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     )
       return true
 
-    if (ref.value === null || document.activeElement === ref.value || ref.value?.contains(document.activeElement)) {
+    if (_ref.value === null || document.activeElement === _ref.value || _ref.value?.contains(document.activeElement)) {
       callback(keyboardEvent, hotkeysEvent)
       return true
     }
 
     return false
-  }, deps ? [ref, enableOnTags, filter, ...deps] : [ref, enableOnTags, filter])
+  }
 
-  useEffect(() => {
+  const isMounted = useMounted()
+
+  watchPostEffect((cleanup) => {
+    if (!unref(isMounted))
+      return
+
     if (!unref(enabled)) {
-      hotkeys.unbind(unref(keys), memoisedCallback)
+      hotkeys.unbind(unref(keys), onKeyboard)
       return
     }
 
@@ -82,10 +84,12 @@ export function useHotkeys<T extends Element>(keys: MaybeRef<string>, callback: 
     if (keyup && keydown !== true)
       (options as Options).keydown = false
 
-    hotkeys(unref(keys), (options as Options) || {}, memoisedCallback)
+    hotkeys(unref(keys), (options as Options) || {}, onKeyboard)
 
-    return () => hotkeys.unbind(unref(keys), memoisedCallback)
-  }, [memoisedCallback, keys, enabled])
+    cleanup(() => {
+      hotkeys.unbind(unref(keys), onKeyboard)
+    })
+  })
 
-  return ref as Ref<T | null>
+  return _ref as Ref<T | null>
 }
