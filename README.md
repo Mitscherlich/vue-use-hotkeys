@@ -24,7 +24,7 @@ import { useHotkeys } from 'vue-use-hotkeys'
 export default defineComponent(() => {
   const count = ref(0)
 
-  useHotKeys('ctrl + k', () => {
+  useHotkeys('ctrl + k', () => {
     count.value += 1
   })
 
