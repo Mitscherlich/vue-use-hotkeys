@@ -50,7 +50,7 @@
     "@testing-library/vue": "8.0.3",
     "@vitejs/plugin-vue-jsx": "3.1.0",
     "@vitest/ui": "^1.0.0",
-    "bumpp": "9.3.1",
+    "bumpp": "9.4.0",
     "eslint": "9.0.0",
     "jsdom": "24.0.0",
     "typescript": "5.4.5",
