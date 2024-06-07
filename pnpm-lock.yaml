@@ -34,7 +34,7 @@ importers:
         version: 8.1.0(@vue/compiler-sfc@3.4.27)(@vue/server-renderer@3.4.27(vue@3.4.27(typescript@5.4.5)))(vue@3.4.27(typescript@5.4.5))
       '@vitejs/plugin-vue-jsx':
         specifier: 4.0.0
-        version: 4.0.0(vite@5.2.12)(vue@3.4.27(typescript@5.4.5))
+        version: 4.0.0(vite@5.2.13)(vue@3.4.27(typescript@5.4.5))
       '@vitest/ui':
         specifier: ^1.0.0
         version: 1.6.0(vitest@1.6.0)
@@ -54,8 +54,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.4.5)
       vite:
-        specifier: 5.2.12
-        version: 5.2.12
+        specifier: 5.2.13
+        version: 5.2.13
       vitest:
         specifier: 1.6.0
         version: 1.6.0(@vitest/ui@1.6.0)(jsdom@24.1.0)
@@ -2998,8 +2998,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite@5.2.12:
-    resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
+  vite@5.2.13:
+    resolution: {integrity: sha512-SSq1noJfY9pR3I1TUENL3rQYDQCFqgD+lM6fTRAM8Nv6Lsg5hDLaXkjETVeBt+7vZBCMoibD+6IWnT2mJ+Zb/A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3408,7 +3408,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.6
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@babel/parser@7.24.4':
     dependencies:
@@ -4158,12 +4158,12 @@ snapshots:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-vue-jsx@4.0.0(vite@5.2.12)(vue@3.4.27(typescript@5.4.5))':
+  '@vitejs/plugin-vue-jsx@4.0.0(vite@5.2.13)(vue@3.4.27(typescript@5.4.5))':
     dependencies:
       '@babel/core': 7.24.6
       '@babel/plugin-transform-typescript': 7.24.6(@babel/core@7.24.6)
       '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.24.6)
-      vite: 5.2.12
+      vite: 5.2.13
       vue: 3.4.27(typescript@5.4.5)
     transitivePeerDependencies:
       - supports-color
@@ -5949,7 +5949,7 @@ snapshots:
   postcss@8.4.38:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.2.0
 
   prelude-ls@1.2.1: {}
@@ -6376,7 +6376,7 @@ snapshots:
     dependencies:
       browserslist: 4.21.10
       escalade: 3.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   update-browserslist-db@1.0.16(browserslist@4.23.0):
     dependencies:
@@ -6406,7 +6406,7 @@ snapshots:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.12
+      vite: 5.2.13
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6417,7 +6417,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.12:
+  vite@5.2.13:
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -6444,7 +6444,7 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.5.1
       tinypool: 0.8.3
-      vite: 5.2.12
+      vite: 5.2.13
       vite-node: 1.6.0
       why-is-node-running: 2.2.2
     optionalDependencies:
