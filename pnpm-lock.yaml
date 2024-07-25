@@ -18,7 +18,7 @@ importers:
         version: 3.12.0(patch_hash=shhrijtjpanxlxjcv33ljr5i6e)
       vue-demi:
         specifier: ^0.14.5
-        version: 0.14.9(vue@3.4.34(typescript@5.5.4))
+        version: 0.14.10(vue@3.4.34(typescript@5.5.4))
     devDependencies:
       '@m9ch/eslint-config-all':
         specifier: ~0.3.2
@@ -3050,8 +3050,8 @@ packages:
   vue-component-type-helpers@1.8.4:
     resolution: {integrity: sha512-6bnLkn8O0JJyiFSIF0EfCogzeqNXpnjJ0vW/SZzNHfe6sPx30lTtTXlE5TFs2qhJlAtDFybStVNpL73cPe3OMQ==}
 
-  vue-demi@0.14.9:
-    resolution: {integrity: sha512-dC1TJMODGM8lxhP6wLToncaDPPNB3biVxxRDuNCYpuXwi70ou7NsGd97KVTJ2omepGId429JZt8oaZKeXbqxwg==}
+  vue-demi@0.14.10:
+    resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
     hasBin: true
     peerDependencies:
@@ -6449,7 +6449,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.4: {}
 
-  vue-demi@0.14.9(vue@3.4.34(typescript@5.5.4)):
+  vue-demi@0.14.10(vue@3.4.34(typescript@5.5.4)):
     dependencies:
       vue: 3.4.34(typescript@5.5.4)
 
