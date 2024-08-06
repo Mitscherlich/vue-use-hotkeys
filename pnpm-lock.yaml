@@ -37,7 +37,7 @@ importers:
         version: 4.0.0(vite@5.4.0)(vue@3.4.37(typescript@5.5.4))
       '@vitest/ui':
         specifier: ^2.0.0
-        version: 2.0.4(vitest@2.0.4)
+        version: 2.0.5(vitest@2.0.4)
       bumpp:
         specifier: 9.4.1
         version: 9.4.1
@@ -58,7 +58,7 @@ importers:
         version: 5.4.0
       vitest:
         specifier: 2.0.4
-        version: 2.0.4(@vitest/ui@2.0.4)(jsdom@24.1.1)
+        version: 2.0.4(@vitest/ui@2.0.5)(jsdom@24.1.1)
       vue:
         specifier: 3.4.37
         version: 3.4.37(typescript@5.5.4)
@@ -1085,6 +1085,9 @@ packages:
   '@vitest/pretty-format@2.0.4':
     resolution: {integrity: sha512-RYZl31STbNGqf4l2eQM1nvKPXE0NhC6Eq0suTTePc4mtMQ1Fn8qZmjV4emZdEdG2NOWGKSCrHZjmTqDCDoeFBw==}
 
+  '@vitest/pretty-format@2.0.5':
+    resolution: {integrity: sha512-h8k+1oWHfwTkyTkb9egzwNMfJAEx4veaPSnMeKbVSjp4euqGSbQlm5+6VHwTr7u4FJslVVsUG5nopCaAYdOmSQ==}
+
   '@vitest/runner@2.0.4':
     resolution: {integrity: sha512-Gk+9Su/2H2zNfNdeJR124gZckd5st4YoSuhF1Rebi37qTXKnqYyFCd9KP4vl2cQHbtuVKjfEKrNJxHHCW8thbQ==}
 
@@ -1094,13 +1097,16 @@ packages:
   '@vitest/spy@2.0.4':
     resolution: {integrity: sha512-uTXU56TNoYrTohb+6CseP8IqNwlNdtPwEO0AWl+5j7NelS6x0xZZtP0bDWaLvOfUbaYwhhWp1guzXUxkC7mW7Q==}
 
-  '@vitest/ui@2.0.4':
-    resolution: {integrity: sha512-9SNE9ve3kgDkVTxJsY7BjqSwyqDVRJbq/AHVHZs+V0vmr/0cCX6yGT6nOahSXEsXFtKAsvRtBXKlTgr+5njzZQ==}
+  '@vitest/ui@2.0.5':
+    resolution: {integrity: sha512-m+ZpVt/PVi/nbeRKEjdiYeoh0aOfI9zr3Ria9LO7V2PlMETtAXJS3uETEZkc8Be2oOl8mhd7Ew+5SRBXRYncNw==}
     peerDependencies:
-      vitest: 2.0.4
+      vitest: 2.0.5
 
   '@vitest/utils@2.0.4':
     resolution: {integrity: sha512-Zc75QuuoJhOBnlo99ZVUkJIuq4Oj0zAkrQ2VzCqNCx6wAwViHEh5Fnp4fiJTE9rA+sAoXRf00Z9xGgfEzV6fzQ==}
+
+  '@vitest/utils@2.0.5':
+    resolution: {integrity: sha512-d8HKbqIcya+GR67mkZbrzhS5kKhtp8dQLcmRZLGTscGVg7yImT82cIrhtn2L8+VujWcy6KZweApgNmPsTAO/UQ==}
 
   '@vue/babel-helper-vue-transform-on@1.2.2':
     resolution: {integrity: sha512-nOttamHUR3YzdEqdM/XXDyCSdxMA9VizUKoroLX6yTyRtggzQMHXcmwh8a7ZErcJttIBIc9s68a1B8GZ+Dmvsw==}
@@ -1281,6 +1287,10 @@ packages:
 
   braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
+    engines: {node: '>=8'}
+
+  braces@3.0.3:
+    resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
   browserslist@4.21.10:
@@ -1847,6 +1857,10 @@ packages:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
 
+  fill-range@7.1.1:
+    resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
+    engines: {node: '>=8'}
+
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
@@ -2334,8 +2348,8 @@ packages:
   micromark@2.11.4:
     resolution: {integrity: sha512-+WoovN/ppKolQOFIAajxi7Lu9kInbPxFuTBVEavFcL8eAfVstoc5MocPmqBeAdBOJV00uaVjegzH4+MA0DN/uA==}
 
-  micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
+  micromatch@4.0.7:
+    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
     engines: {node: '>=8.6'}
 
   mime-db@1.51.0:
@@ -4164,6 +4178,10 @@ snapshots:
     dependencies:
       tinyrainbow: 1.2.0
 
+  '@vitest/pretty-format@2.0.5':
+    dependencies:
+      tinyrainbow: 1.2.0
+
   '@vitest/runner@2.0.4':
     dependencies:
       '@vitest/utils': 2.0.4
@@ -4179,20 +4197,27 @@ snapshots:
     dependencies:
       tinyspy: 3.0.0
 
-  '@vitest/ui@2.0.4(vitest@2.0.4)':
+  '@vitest/ui@2.0.5(vitest@2.0.4)':
     dependencies:
-      '@vitest/utils': 2.0.4
+      '@vitest/utils': 2.0.5
       fast-glob: 3.3.2
       fflate: 0.8.2
       flatted: 3.3.1
       pathe: 1.1.2
       sirv: 2.0.4
       tinyrainbow: 1.2.0
-      vitest: 2.0.4(@vitest/ui@2.0.4)(jsdom@24.1.1)
+      vitest: 2.0.4(@vitest/ui@2.0.5)(jsdom@24.1.1)
 
   '@vitest/utils@2.0.4':
     dependencies:
       '@vitest/pretty-format': 2.0.4
+      estree-walker: 3.0.3
+      loupe: 3.1.1
+      tinyrainbow: 1.2.0
+
+  '@vitest/utils@2.0.5':
+    dependencies:
+      '@vitest/pretty-format': 2.0.5
       estree-walker: 3.0.3
       loupe: 3.1.1
       tinyrainbow: 1.2.0
@@ -4440,6 +4465,10 @@ snapshots:
   braces@3.0.2:
     dependencies:
       fill-range: 7.0.1
+
+  braces@3.0.3:
+    dependencies:
+      fill-range: 7.1.1
 
   browserslist@4.21.10:
     dependencies:
@@ -5189,7 +5218,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.5
+      micromatch: 4.0.7
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -5206,6 +5235,10 @@ snapshots:
       flat-cache: 4.0.1
 
   fill-range@7.0.1:
+    dependencies:
+      to-regex-range: 5.0.1
+
+  fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
 
@@ -5706,9 +5739,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  micromatch@4.0.5:
+  micromatch@4.0.7:
     dependencies:
-      braces: 3.0.2
+      braces: 3.0.3
       picomatch: 2.3.1
 
   mime-db@1.51.0: {}
@@ -5758,14 +5791,14 @@ snapshots:
       jiti: 1.21.0
       mlly: 1.6.1
       mri: 1.2.0
-      pathe: 1.1.2
+      pathe: 1.1.1
     optionalDependencies:
       typescript: 5.5.4
 
   mlly@1.4.1:
     dependencies:
       acorn: 8.11.3
-      pathe: 1.1.2
+      pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.3.2
 
@@ -5946,7 +5979,7 @@ snapshots:
     dependencies:
       jsonc-parser: 3.2.0
       mlly: 1.6.1
-      pathe: 1.1.2
+      pathe: 1.1.1
 
   pluralize@8.0.0: {}
 
@@ -6425,7 +6458,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitest@2.0.4(@vitest/ui@2.0.4)(jsdom@24.1.1):
+  vitest@2.0.4(@vitest/ui@2.0.5)(jsdom@24.1.1):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.4
@@ -6447,7 +6480,7 @@ snapshots:
       vite-node: 2.0.4
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@vitest/ui': 2.0.4(vitest@2.0.4)
+      '@vitest/ui': 2.0.5(vitest@2.0.4)
       jsdom: 24.1.1
     transitivePeerDependencies:
       - less
