@@ -39,8 +39,8 @@ importers:
         specifier: ^2.0.0
         version: 2.1.2(vitest@2.1.2)
       bumpp:
-        specifier: 9.6.1
-        version: 9.6.1
+        specifier: 9.7.1
+        version: 9.7.1
       eslint:
         specifier: 9.12.0
         version: 9.12.0(jiti@1.21.6)
@@ -1318,8 +1318,8 @@ packages:
   builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
 
-  bumpp@9.6.1:
-    resolution: {integrity: sha512-lQlPfyS0GrO5FaOODK+OHQxfCT+6/xWfd3Zt8dzsmzm69RWQfh5fAU9igmeZWOzK/s+4vL+gQLo3yw474ntBZw==}
+  bumpp@9.7.1:
+    resolution: {integrity: sha512-Z6fhD5B8POcSkP+LIHeFQ0+vF0p/C3U+aYp3Yui748VCmsHrhJ/ZshP2970FqE93ymHrJVXTTF8/HDKrRNEYvw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1615,10 +1615,6 @@ packages:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
     engines: {node: '>=12'}
     hasBin: true
-
-  escalade@3.1.2:
-    resolution: {integrity: sha512-ErCHMCae19vR8vQGe50xIsVomy19rg6gFu3+r3jkEO46suLMWBksvVyoGgQV+jOfl84ZSOSlmv6Gxa89PmTGmA==}
-    engines: {node: '>=6'}
 
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -4492,7 +4488,7 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  bumpp@9.6.1:
+  bumpp@9.7.1:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       c12: 1.11.2
@@ -4926,8 +4922,6 @@ snapshots:
       '@esbuild/win32-arm64': 0.21.5
       '@esbuild/win32-ia32': 0.21.5
       '@esbuild/win32-x64': 0.21.5
-
-  escalade@3.1.2: {}
 
   escalade@3.2.0: {}
 
@@ -6423,13 +6417,13 @@ snapshots:
   update-browserslist-db@1.0.16(browserslist@4.23.0):
     dependencies:
       browserslist: 4.23.0
-      escalade: 3.1.2
+      escalade: 3.2.0
       picocolors: 1.1.0
 
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
       browserslist: 4.23.3
-      escalade: 3.1.2
+      escalade: 3.2.0
       picocolors: 1.1.0
 
   uri-js@4.4.1:
