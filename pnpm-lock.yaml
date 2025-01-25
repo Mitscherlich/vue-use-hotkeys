@@ -39,8 +39,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.2(vitest@3.0.2)
       bumpp:
-        specifier: 9.9.2
-        version: 9.9.2
+        specifier: 9.11.1
+        version: 9.11.1
       eslint:
         specifier: 9.17.0
         version: 9.17.0(jiti@2.4.2)
@@ -978,8 +978,8 @@ packages:
   builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
 
-  bumpp@9.9.2:
-    resolution: {integrity: sha512-ggRxRV1rWHEyWXnf55UqYzGvttS/Vpkl1zxcNdE5xoYMTHlSgRA0Td4nKn3ckCcMuC+MTgaGQrbKBeyr0V9+Hg==}
+  bumpp@9.11.1:
+    resolution: {integrity: sha512-jBHlab9NnRwrpHsockb5E+MBo0os2yS6S7i3cnN8hB6EkTardKQotmd0CFdOc8pubLz2fxj2AD6RGtrySVG6Mw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2230,6 +2230,9 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
+  package-manager-detector@0.2.8:
+    resolution: {integrity: sha512-ts9KSdroZisdvKMWVAVCXiKqnqNfXz4+IbrBG8/BWx/TR5le+jfenvoBuIZ6UWM9nz47W7AbD9qYfAwfWMIwzA==}
+
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -2733,11 +2736,11 @@ packages:
     resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
     engines: {node: '>=10'}
 
+  tiny-conventional-commits-parser@0.0.1:
+    resolution: {integrity: sha512-N5+AZWdBeHNSgTIaxvx0+9mFrnW4H1BbjQ84H7i3TuWSkno8Hju886hLaHZhE/hYEKrfrfl/uHurqpZJHDuYGQ==}
+
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
-
-  tinyexec@0.3.1:
-    resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
 
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
@@ -4066,16 +4069,18 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  bumpp@9.9.2:
+  bumpp@9.11.1:
     dependencies:
       c12: 2.0.1
       cac: 6.7.14
       escalade: 3.2.0
       js-yaml: 4.1.0
       jsonc-parser: 3.3.1
+      package-manager-detector: 0.2.8
       prompts: 2.4.2
       semver: 7.6.3
-      tinyexec: 0.3.1
+      tiny-conventional-commits-parser: 0.0.1
+      tinyexec: 0.3.2
       tinyglobby: 0.2.10
     transitivePeerDependencies:
       - magicast
@@ -5505,6 +5510,8 @@ snapshots:
 
   p-try@2.2.0: {}
 
+  package-manager-detector@0.2.8: {}
+
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
@@ -6008,9 +6015,9 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  tinybench@2.9.0: {}
+  tiny-conventional-commits-parser@0.0.1: {}
 
-  tinyexec@0.3.1: {}
+  tinybench@2.9.0: {}
 
   tinyexec@0.3.2: {}
 
