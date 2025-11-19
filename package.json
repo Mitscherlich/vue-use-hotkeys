@@ -1,62 +1,54 @@
 {
   "name": "vue-use-hotkeys",
-  "description": "Vue composition for using keyboard shortcuts in components",
-  "version": "0.4.0",
+  "version": "1.0.0-beta.0",
+  "description": "🎹 基于 hotkeys-js 的 Vue 3 Composition API 快捷键库",
+  "type": "module",
+  "author": "Mitscherlich Wei <mitscherlich36@gmail.com>",
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "keywords": [
+    "vue",
+    "vue3",
+    "hotkeys",
+    "keyboard",
+    "shortcuts",
+    "composable",
+    "composition-api"
+  ],
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
-  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mitscherlich/vue-use-hotkeys.git"
-  },
-  "homepage": "https://github.com/Mitscherlich/vue-use-hotkeys#readme",
-  "bugs": "https://github.com/Mitscherlich/vue-use-hotkeys/issues",
-  "author": "Mitscherlich <mitscherlich36@gmail.com>",
   "scripts": {
-    "build": "unbuild",
-    "dev": "vitest",
-    "test": "vitest run",
-    "prepublishOnly": "pnpm run build",
-    "release": "bumpp package.json && pnpm publish"
-  },
-  "peerDependencies": {
-    "vue": "^2.7.0 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
+    "build": "rslib build && vue-tsc",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest run"
   },
   "dependencies": {
-    "hotkeys-js": "^3.13.15",
-    "vue-demi": "^0.14.10"
+    "hotkeys-js": "4.0.0-beta.6"
   },
   "devDependencies": {
-    "@m9ch/eslint-config-all": "~0.3.2",
-    "@testing-library/dom": "10.4.0",
-    "@testing-library/user-event": "14.6.1",
-    "@testing-library/vue": "8.1.0",
-    "@vitejs/plugin-vue-jsx": "4.1.1",
-    "@vitest/ui": "^3.0.0",
-    "bumpp": "10.3.1",
-    "eslint": "9.17.0",
-    "jsdom": "25.0.1",
-    "typescript": "5.7.2",
-    "unbuild": "^3.0.0",
-    "vite": "6.4.1",
-    "vitest": "3.0.2",
-    "vue": "3.5.13"
+    "@biomejs/biome": "2.3.2",
+    "@rsbuild/core": "~1.6.6",
+    "@rslib/core": "^0.18.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "jsdom": "^26.1.0",
+    "rsbuild-plugin-unplugin-vue": "^0.1.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.9",
+    "vue": "^3.5.24",
+    "vue-tsc": "^3.1.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
   }
 }
