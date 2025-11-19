@@ -1,12 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "lib": ["DOM", "ES2022"],
     "jsx": "preserve",
+    "skipLibCheck": true,
+    "jsxImportSource": "vue",
+    "useDefineForClassFields": true,
+    "declaration": true,
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+
+    /* modules */
+    "module": "ESNext",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+
+    /* type checking */
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "types": ["vitest/globals"]
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": ["src"]
 }
