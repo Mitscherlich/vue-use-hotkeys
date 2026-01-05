@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       hotkeys-js:
-        specifier: 4.0.0-beta.6
-        version: 4.0.0-beta.6
+        specifier: 4.0.0
+        version: 4.0.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.3.11
@@ -1096,8 +1096,8 @@ packages:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
     engines: {node: '>= 0.4.0'}
 
-  hotkeys-js@4.0.0-beta.6:
-    resolution: {integrity: sha512-oR2ReRJcLnm4L4itKrSUMQSdec0P0KTPtIuP13JsYmkx4ls1a6iIFUi2WfzAE6wBmme1ptdJJ7qGxpwlO5emdA==}
+  hotkeys-js@4.0.0:
+    resolution: {integrity: sha512-gIoeqMWYqPIItc4HaseVbtTRpEpBbeufZMUcoWtN62JZdDq3KadS1ijN6wpaDjTzRK7PjT3QOPUcx+yNT0rrZQ==}
 
   html-encoding-sniffer@6.0.0:
     resolution: {integrity: sha512-CV9TW3Y3f8/wT0BRFc1/KAVQ3TUHiXmaAb6VW9vtiMFf7SLoMd1PdAc4W3KFOFETBJUb90KatHqlsZMWV+R9Gg==}
@@ -2579,7 +2579,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.1
 
-  hotkeys-js@4.0.0-beta.6: {}
+  hotkeys-js@4.0.0: {}
 
   html-encoding-sniffer@6.0.0:
     dependencies:
