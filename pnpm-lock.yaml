@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       hotkeys-js:
-        specifier: 4.0.0-beta.6
-        version: 4.0.0-beta.6
+        specifier: 4.0.4
+        version: 4.0.4
     devDependencies:
       '@biomejs/biome':
         specifier: 2.3.11
@@ -35,7 +35,7 @@ importers:
         version: 29.0.2
       rsbuild-plugin-unplugin-vue:
         specifier: ^0.1.0
-        version: 0.1.0(@rsbuild/core@1.6.7)(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1)
+        version: 0.1.0(@rsbuild/core@1.6.7)(@types/node@24.10.1)(jiti@2.6.1)(supports-color@7.2.0)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -1194,8 +1194,8 @@ packages:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
     engines: {node: '>= 0.4.0'}
 
-  hotkeys-js@4.0.0-beta.6:
-    resolution: {integrity: sha512-oR2ReRJcLnm4L4itKrSUMQSdec0P0KTPtIuP13JsYmkx4ls1a6iIFUi2WfzAE6wBmme1ptdJJ7qGxpwlO5emdA==}
+  hotkeys-js@4.0.4:
+    resolution: {integrity: sha512-hseNiqaskxSnujuGp8aRMLJfcjaFiTSS0I2GQhqru82N/sx6CGyUf6pvU5X1iycvw2EqmvILkFIb5OzYFXY+9A==}
 
   html-encoding-sniffer@6.0.0:
     resolution: {integrity: sha512-CV9TW3Y3f8/wT0BRFc1/KAVQ3TUHiXmaAb6VW9vtiMFf7SLoMd1PdAc4W3KFOFETBJUb90KatHqlsZMWV+R9Gg==}
@@ -1513,10 +1513,6 @@ packages:
   tinyexec@1.1.1:
     resolution: {integrity: sha512-VKS/ZaQhhkKFMANmAOhhXVoIfBXblQxGX1myCQ2faQrfmobMftXeJPcZGp0gS07ocvGJWDLZGyOZDadDBqYIJg==}
     engines: {node: '>=18'}
-
-  tinyglobby@0.2.15:
-    resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
-    engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.16:
     resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
@@ -2587,9 +2583,11 @@ snapshots:
     transitivePeerDependencies:
       - '@noble/hashes'
 
-  debug@4.4.0:
+  debug@4.4.0(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decimal.js@10.6.0: {}
 
@@ -2689,10 +2687,6 @@ snapshots:
 
   expect-type@1.3.0: {}
 
-  fdir@6.5.0(picomatch@4.0.3):
-    optionalDependencies:
-      picomatch: 4.0.3
-
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
       picomatch: 4.0.4
@@ -2751,7 +2745,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.1
 
-  hotkeys-js@4.0.0-beta.6: {}
+  hotkeys-js@4.0.4: {}
 
   html-encoding-sniffer@6.0.0:
     dependencies:
@@ -3015,9 +3009,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  rsbuild-plugin-unplugin-vue@0.1.0(@rsbuild/core@1.6.7)(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1):
+  rsbuild-plugin-unplugin-vue@0.1.0(@rsbuild/core@1.6.7)(@types/node@24.10.1)(jiti@2.6.1)(supports-color@7.2.0)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1):
     dependencies:
-      unplugin-vue: 6.2.0(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1)
+      unplugin-vue: 6.2.0(@types/node@24.10.1)(jiti@2.6.1)(supports-color@7.2.0)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1)
     optionalDependencies:
       '@rsbuild/core': 1.6.7
     transitivePeerDependencies:
@@ -3094,11 +3088,6 @@ snapshots:
 
   tinyexec@1.1.1: {}
 
-  tinyglobby@0.2.15:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
-
   tinyglobby@0.2.16:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.4)
@@ -3129,10 +3118,10 @@ snapshots:
 
   undici@7.25.0: {}
 
-  unplugin-vue@6.2.0(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1):
+  unplugin-vue@6.2.0(@types/node@24.10.1)(jiti@2.6.1)(supports-color@7.2.0)(terser@5.44.1)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.1):
     dependencies:
       '@vue/reactivity': 3.5.13
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@7.2.0)
       unplugin: 2.3.10
       vite: 6.4.1(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.1)
       vue: 3.5.27(typescript@5.9.3)
@@ -3160,11 +3149,11 @@ snapshots:
   vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(terser@5.44.1)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
-      fdir: 6.5.0(picomatch@4.0.3)
-      picomatch: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
       postcss: 8.5.6
       rollup: 4.52.5
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
     optionalDependencies:
       '@types/node': 24.10.1
       fsevents: 2.3.3
