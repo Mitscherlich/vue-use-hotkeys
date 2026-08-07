@@ -1,12 +1,6 @@
 import type { HotkeysEvent, KeyHandler } from 'hotkeys-js';
 import hotkeys from 'hotkeys-js';
-import {
-  type MaybeRef,
-  type Ref,
-  ref,
-  unref,
-  watchPostEffect,
-} from 'vue';
+import { type MaybeRef, type Ref, ref, unref, watchPostEffect } from 'vue';
 import { useMounted } from './use-mounted';
 
 type AvailableTags = 'INPUT' | 'TEXTAREA' | 'SELECT';

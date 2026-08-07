@@ -16,4 +16,3 @@ export function useMounted() {
 
   return isMounted;
 }
-

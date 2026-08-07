@@ -323,13 +323,9 @@ describe('useHotkeys', () => {
 
     const TestComponent = defineComponent({
       setup() {
-        useHotkeys(
-          'a',
-          () => {
-            dep.value++;
-          },
-          [dep],
-        );
+        useHotkeys('a', () => {
+          dep.value++;
+        }, [dep]);
         return () => null;
       },
     });
@@ -535,4 +531,3 @@ describe('useHotkeys', () => {
     expect(callback).toHaveBeenCalledTimes(1);
   });
 });
-
