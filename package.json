@@ -43,7 +43,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "jsdom": "^30.0.1",
     "rsbuild-plugin-unplugin-vue": "^0.2.0",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.0",
     "vitest": "^4.1.10",
     "vue": "^3.5.40",
     "vue-tsc": "^3.3.9"
