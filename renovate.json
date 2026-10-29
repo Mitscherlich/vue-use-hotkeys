@@ -1,3 +1,14 @@
 {
-  "extends": ["config:base"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "platformAutomerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "merge-commit",
+  "packageRules": [
+    {
+      "description": "CI 全绿后自动合并 minor、patch、pin、digest",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
